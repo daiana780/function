@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        function converterTemperatura(valor, direcao) {
+            // Valida se o valor é um número válido
+            if (typeof valor !== 'number' || isNaN(valor)) {
+                return "Erro: Por favor, insira um valor numérico válido.";
+            }
+        
+            // Verifica a direção da conversão
+            if (direcao === "CelsiusParaFahrenheit") {
+                // Converte Celsius para Fahrenheit
+                const fahrenheit = (valor * 9 / 5) + 32;
+                return parseFloat(fahrenheit.toFixed(2));
+            } else if (direcao === "FahrenheitParaCelsius") {
+                // Converte Fahrenheit para Celsius
+                const celsius = (valor - 32) * 5 / 9;
+                return parseFloat(celsius.toFixed(2));
+            } else {
+                return "Erro: Direção inválida. Use 'CelsiusParaFahrenheit' ou 'FahrenheitParaCelsius'.";
+            }
+        }
+        console.log(converterTemperatura(25, "CelsiusParaFahrenheit")); 
+    </script>
+    
+</body>
+</html>

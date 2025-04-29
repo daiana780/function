@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        function calcularMedia(numeros) {
+            // Verifica se o array está vazio ou não é um array
+            if (!Array.isArray(numeros)) {
+                return "Erro: O parâmetro fornecido não é um array.";
+            }
+        
+            if (numeros.length === 0) {
+                return 0; // Retorna 0 se o array estiver vazio
+            }
+        
+            // Calcula a soma dos números do array
+            const soma = numeros.reduce((acumulador, numero) => acumulador + numero, 0);
+        
+            // Calcula a média
+            const media = soma / numeros.length;
+        
+            // Retorna a média com duas casas decimais
+            return parseFloat(media.toFixed(2));
+        }
+        console.log(calcularMedia([10, 8, 6]));   
+    </script>
+</body>
+</html>

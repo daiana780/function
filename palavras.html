@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        function filtraPalavras(palavras, numero) {
+            // Verifica se o primeiro parâmetro é um array
+            if (!Array.isArray(palavras)) {
+                return "Erro: O primeiro parâmetro deve ser um array.";
+            }
+        
+            // Verifica se o segundo parâmetro é um número válido
+            if (typeof numero !== 'number' || isNaN(numero) || numero < 0) {
+                return "Erro: O segundo parâmetro deve ser um número maior ou igual a zero.";
+            }
+        
+            // Filtra as palavras com comprimento >= numero
+            const resultado = palavras.filter(palavra => palavra.length >= numero);
+        
+            return resultado;
+        }
+            console.log (filtraPalavras(["sol", "lua", "estrela", "cometa"], 4));
+    </script>
+</body>
+</html>

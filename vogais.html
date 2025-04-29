@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        function contarVogais(texto) {
+            // Verifica se o parâmetro é uma string
+            if (typeof texto !== 'string') {
+                return 0;
+            }
+        
+            // Expressão regular para encontrar todas as vogais, ignorando maiúsculas/minúsculas
+            const vogais = texto.match(/[aeiou]/gi);
+        
+            // Se encontrou vogais, retorna a quantidade. Senão, retorna 0.
+            return vogais ? vogais.length : 0;
+        }
+        console.log(contarVogais("JavaScript é incrível"));
+    </script>
+</body>
+</html>
