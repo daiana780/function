@@ -1,1 +1,1 @@
-Atividades de funções.
+Atividades de funções. Linguagem HTML.
